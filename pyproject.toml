@@ -1,0 +1,29 @@
+[project]
+name = "kafka-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Anderson O. Aristides", email = "aoaristides@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "anthropic>=2.3.0",
+    "httpx>=0.28.1",
+    "pydantic>=2.14.1",
+]
+
+[project.scripts]
+kafka-assistant = "kafka_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.4.0",
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+    "pytest-httpx>=0.36.2",
+]
